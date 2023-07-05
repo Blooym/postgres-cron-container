@@ -110,6 +110,6 @@ jobs:
     - name: Prune Untagged 
       uses: vlaurin/action-ghcr-prune@v0.5.0
       with:
-        token: ${{ secrets.DELETE_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         container: postgres-cron-container
         prune-untagged: true
