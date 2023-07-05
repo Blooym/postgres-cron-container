@@ -111,5 +111,5 @@ jobs:
       uses: vlaurin/action-ghcr-prune@v0.5.0
       with:
         token: ${{ secrets.DELETE_TOKEN }}
-        repo: postgres-cron-container
+        container: postgres-cron-container
         prune-untagged: true
