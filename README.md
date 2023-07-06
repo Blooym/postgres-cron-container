@@ -6,7 +6,7 @@ A repackaged PostgresSQL docker image with pg_cron bundled inside and automatica
 
 All images are updated automatically every day and are kept as close to the [base Postgres image](https://hub.docker.com/_/postgres) as possible. Images may not be 1:1 compatiable with the base image and are maintained on a best-effort basis.
 
-`pg_cron` will either be installed from a package repository or built from the [source repository](https://github.com/citusdata/pg_cron) (using a pinned version number) depending on package availability, this means that there may be times where different images within the same version of postgres may have different versions of `pg_cron` installed.
+`pg_cron` will either be installed from a package repository or built from the [source repository](https://github.com/citusdata/pg_cron) (using a pinned version number) depending on package availability, as such there may be times where different images within the same version of postgres may have different versions of `pg_cron` installed.
 
 ## Usage
 
