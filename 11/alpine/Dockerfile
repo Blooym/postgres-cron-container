@@ -1,7 +1,26 @@
 FROM postgres:11-alpine
 
-RUN apk add --no-cache postgresql-pg_cron \
-    && cp /usr/lib/postgresql15/pg_cron.so /usr/local/lib/postgresql/ \
-    && cp /usr/share/postgresql/extension/* /usr/local/share/postgresql/extension
+ENV PG_CRON_VERSION "1.5.2"
+
+# Build dependencies
+RUN apk add --no-cache --virtual .build-deps \ 
+    build-base \ 
+    clang15 \
+    llvm15 \
+    tar
+
+# Grab tarball from repository
+RUN wget -O /pg_cron.tgz https://github.com/citusdata/pg_cron/archive/v$PG_CRON_VERSION.tar.gz \
+    && tar xvzf /pg_cron.tgz
+
+# Build & install
+RUN cd pg_cron-$PG_CRON_VERSION \
+    && sed -i.bak -e 's/-Werror//g' Makefile \ 
+    && sed -i.bak -e 's/-Wno-implicit-fallthrough//g' Makefile \
+    && make && make install
+
+# Cleanup
+RUN rm -rf pg_cron.tgz && rm -rf pg_cron-* \
+    && apk del .build-deps
 
 CMD ["-c", "shared_preload_libraries=pg_cron", "-c", "cron.database_name=postgres"]

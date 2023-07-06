@@ -27,6 +27,7 @@ jobs:
       packages: write
     strategy:
       max-parallel: 4 # Avoid rate-limiting.
+      fail-fast: false # Can just fix images that break but release the rest.
       matrix:
         Dockerfile: [
             "11/alpine/Dockerfile", "11/bookworm/Dockerfile", "11/bullseye/Dockerfile",
