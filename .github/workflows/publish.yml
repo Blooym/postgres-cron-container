@@ -26,6 +26,7 @@ jobs:
       contents: read
       packages: write
     strategy:
+      max-parallel: 4 # Avoid rate-limiting.
       matrix:
         Dockerfile: [
             "11/alpine/Dockerfile", "11/bookworm/Dockerfile", "11/bullseye/Dockerfile",
