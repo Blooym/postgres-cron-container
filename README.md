@@ -11,4 +11,4 @@ All images are updated automatically every day and are kept as close to the [bas
 
 ## Usage
 
-Check out the package page [here](https://github.com/Blooym/postgres-extended/pkgs/container/postgres-extended) for all available tags. The tags are named in the format of `postgres-extended:<postgres-version>-<distro>`.
+Check out the package page [here](https://github.com/Blooym/postgres-extended/pkgs/container/postgres-extended/versions?filters%5Bversion_type%5D=tagged) for all available tags. The tags are named in the format of `postgres-extended:<postgres-version>-<distro>`.
