@@ -116,3 +116,5 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         container: postgres-extended
         prune-untagged: true
+        keep-younger-than: 2
+
