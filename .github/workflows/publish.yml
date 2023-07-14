@@ -26,7 +26,7 @@ jobs:
       contents: read
       packages: write
     strategy:
-      max-parallel: 3 # Avoid rate-limiting.
+      max-parallel: 1 # Avoid rate-limiting.
       fail-fast: false # Can just fix images that break but release the rest.
       matrix:
         Dockerfile: [
