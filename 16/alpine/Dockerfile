@@ -1,4 +1,4 @@
-FROM postgres:14-alpine
+FROM postgres:16-alpine
 
 ENV PG_CRON_VERSION "1.6.0"
 

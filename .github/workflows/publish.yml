@@ -35,6 +35,7 @@ jobs:
             "13/alpine/Dockerfile", "13/bookworm/Dockerfile", "13/bullseye/Dockerfile",
             "14/alpine/Dockerfile", "14/bookworm/Dockerfile", "14/bullseye/Dockerfile",
             "15/alpine/Dockerfile", "15/bookworm/Dockerfile", "15/bullseye/Dockerfile",
+            "16/alpine/Dockerfile", "16/bookworm/Dockerfile", "16/bullseye/Dockerfile",
             "latest/Dockerfile"
         ]
 
