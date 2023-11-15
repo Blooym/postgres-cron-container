@@ -30,7 +30,6 @@ jobs:
       fail-fast: false # Can just fix images that break but release the rest.
       matrix:
         Dockerfile: [
-            "11/alpine/Dockerfile", "11/bookworm/Dockerfile", "11/bullseye/Dockerfile",
             "12/alpine/Dockerfile", "12/bookworm/Dockerfile", "12/bullseye/Dockerfile",
             "13/alpine/Dockerfile", "13/bookworm/Dockerfile", "13/bullseye/Dockerfile",
             "14/alpine/Dockerfile", "14/bookworm/Dockerfile", "14/bullseye/Dockerfile",
