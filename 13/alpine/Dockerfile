@@ -1,6 +1,6 @@
 FROM postgres:13-alpine
 
-ENV PG_CRON_VERSION "1.6.0"
+ENV PG_CRON_VERSION "1.6.4"
 
 # Build dependencies
 RUN apk add --no-cache --virtual .build-deps \ 
