@@ -5,7 +5,7 @@ ENV PG_CRON_VERSION "1.6.4"
 # Build dependencies
 RUN apk add --no-cache --virtual .build-deps \ 
     build-base \ 
-    clang15 \
+    clang19 \
     llvm15 \
     tar
 
