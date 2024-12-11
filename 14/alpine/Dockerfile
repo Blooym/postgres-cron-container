@@ -6,7 +6,7 @@ ENV PG_CRON_VERSION "1.6.4"
 RUN apk add --no-cache --virtual .build-deps \ 
     build-base \ 
     clang19 \
-    llvm15 \
+    llvm19 \
     tar
 
 # Grab tarball from repository
